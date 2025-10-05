@@ -60,7 +60,7 @@ It uses the **LangChain** ecosystem to:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/hybrid-pdf-rag.git
+git clone https://github.com/kahankachhadiya/Celora.git
 cd hybrid-pdf-rag
 
 # Install dependencies
