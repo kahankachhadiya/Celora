@@ -1,0 +1,64 @@
+# requirements.txt
+
+# Core dependencies
+gradio>=4.0.0
+asyncio
+typing
+
+# Document processing
+PyMuPDF>=1.23.0  # fitz for advanced PDF processing
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+openpyxl>=3.1.0
+xlrd>=2.0.1
+python-pptx>=0.6.21
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Image processing
+Pillow>=10.0.0
+pytesseract>=0.3.10
+
+# Audio processing
+openai-whisper>=20231117
+torch>=2.0.0
+torchaudio>=2.0.0
+pyannote.audio>=3.1.0
+eyed3>=0.9.7
+mutagen>=1.47.0
+
+# Machine Learning / NLP
+langchain>=0.1.0
+langchain-chroma>=0.1.0
+langchain-huggingface>=0.0.3
+langchain-openai>=0.1.0
+langchain-text-splitters>=0.0.1
+sentence-transformers>=2.2.0
+chromadb>=0.4.0
+
+# Optional Database backends
+arango>=7.7.0
+neo4j>=5.0.0
+
+# Utilities
+python-magic>=0.4.27
+hashlib2>=1.0.1
+tempfile
+concurrent.futures
+logging
+
+# API clients
+openai>=1.0.0
+requests>=2.31.0
+
+# Development dependencies
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+
+# System dependencies (install separately)
+# - tesseract-ocr (for OCR functionality)
+# - ffmpeg (for audio processing)
+# - ArangoDB (optional, for graph database)
+# - Neo4j (optional, for graph database)
+
