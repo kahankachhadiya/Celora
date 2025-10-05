@@ -50,14 +50,6 @@ It uses the **LangChain** ecosystem to:
 
 ## ⚙️ Workflow
 
-```mermaid
-flowchart LR
-A[📄 PDF File] --> B[⚙️ hybrid_converter.py\n(AI + PyMuPDF)]
-B -->|Outputs| C[📝 DOCX File]
-C --> D[🧠 ui_gradio.py\nRAG Chat Interface]
-D --> E[💬 User Q&A about content]
-```
-
 1. **Run `hybrid_converter.py`** to preprocess and convert PDFs into high-quality `.docx` files.  
 2. **Upload** the resulting DOCX (or other supported files) into the **Gradio interface**.  
 3. **Chat** with the content using natural language questions.
