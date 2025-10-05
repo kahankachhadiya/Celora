@@ -56,3 +56,109 @@ A[📄 PDF File] --> B[⚙️ hybrid_converter.py\n(AI + PyMuPDF)]
 B -->|Outputs| C[📝 DOCX File]
 C --> D[🧠 ui_gradio.py\nRAG Chat Interface]
 D --> E[💬 User Q&A about content]
+```
+
+1. **Run `hybrid_converter.py`** to preprocess and convert PDFs into high-quality `.docx` files.  
+2. **Upload** the resulting DOCX (or other supported files) into the **Gradio interface**.  
+3. **Chat** with the content using natural language questions.
+
+---
+
+## 🧩 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/hybrid-pdf-rag.git
+cd hybrid-pdf-rag
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+> 🧠 Make sure you have [CUDA](https://developer.nvidia.com/cuda-downloads) installed for GPU acceleration (optional but recommended).
+
+---
+
+## 🔑 Environment Variables
+
+You can configure API and model settings using environment variables:
+
+```bash
+export OPENAI_API_KEY="sk-or-xxxxxxxxxxxx"
+export OPENAI_API_BASE="https://openrouter.ai/api/v1"
+export PERSIST_DIR="./db"
+export VISION_MODEL="qwen/qwen-2.5-vl-72b-instruct"
+```
+
+---
+
+## 🧠 Usage
+
+### 1️⃣ Run Hybrid Preprocessor
+
+```bash
+python hybrid_converter.py
+```
+
+- Converts `sample.pdf` → `sample_hybrid.docx`
+- Extracts images, tables, and formatted text
+
+---
+
+### 2️⃣ Launch Chat UI
+
+```bash
+python ui_gradio.py
+```
+
+- Opens a Gradio web app at `http://localhost:7860`
+- Upload the DOCX (or other supported files)
+- Enter your OpenRouter API key
+- Ask questions like:
+
+```text
+"Summarize this document."
+"List all tables mentioned."
+"What does the chart on page 3 represent?"
+```
+
+---
+
+## 🧱 Project Structure
+
+```
+📦 hybrid-pdf-rag/
+│
+├── hybrid_converter.py    # Hybrid PDF → DOCX converter
+├── ui_gradio.py           # Gradio-based RAG chat interface
+├── requirements.txt       # Dependencies
+└── README.md              # You are here
+```
+
+---
+
+## 💡 Example Use Cases
+
+- Research papers → Extract structured DOCX → Query specific sections  
+- Financial reports → Extract tables & figures → Ask performance questions  
+- Scanned PDFs → OCR & summarize via RAG pipeline  
+
+---
+
+## 🧰 Requirements
+
+- **Python** ≥ 3.9  
+- **Libraries**:
+  - `torch`, `fitz` (PyMuPDF), `docx`, `docling`
+  - `langchain`, `gradio`, `pytesseract`, `whisper`
+  - `sentence-transformers`, `chromadb`
+
+---
+
+## 🧾 License
+
+**MIT License © 2025 Your Name**
+
+---
+
+> 💬 *“AI-enhanced document understanding — from PDF to conversation.”*
